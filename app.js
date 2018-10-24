@@ -11,7 +11,11 @@ app.use(cors({origin: '*'}));
 app.use(bodyParser.json());
 
 // custom Routes
-app.use('/encuestaRoutes', encuestasRoutes);
+app.use('/encuesta', encuestasRoutes);
+
+app.use('/hola', (req, res) => {
+    res.json('Hola mundo!');
+});
 
 // if got to this point, means route error
 app.use((req, res, next) => {
