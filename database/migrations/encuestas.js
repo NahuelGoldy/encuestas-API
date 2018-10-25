@@ -31,7 +31,7 @@ exports.up = function(knex, Promise) {
         table.string('recibis_bono').notNullable();
         table.string('bono_sujeto_a').notNullable();
         table.string('ajustes_por_inflacion').notNullable();
-        table.decimal('porcentaje_ajuste_inflacion', 2, 2);
+        table.decimal('porcentaje_ajuste_inflacion', 5, 2);
         table.string('cantidad_empleados').nullable();
         table.boolean('cambiaste_empresa_ultimos_6_meses');
         table.string('motivo_cambio_empresa').nullable();
